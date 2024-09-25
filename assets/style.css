@@ -1,0 +1,520 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #b0b0b0;
+}
+
+
+header {
+    background-color: #52aca4;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: system-ui, -apple-system;
+    font-size: 18px;
+}
+
+header .logo img {
+    max-height: 100px;
+    margin-left: 20px;
+    margin-bottom: -15px;
+}
+
+header .menu {
+    float: right;
+    margin-right: 20px;
+    margin-top: -60px;
+}
+
+header .menu ul {
+    list-style: none;
+}
+
+header .menu ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+header .menu ul li a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header .menu ul li a:hover {
+    text-decoration: underline;
+}
+
+
+#main {
+    position: relative;
+    height: 100vh;
+    background-image: url('/02-2024-primer-examen-parcial-MichiiMaltz11/assets/imagenes/caracteristicas_testimonios/secadora.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+   
+}
+
+
+#main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: system-ui, -apple-system;
+}
+
+#main h1 {
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); 
+}
+
+#main p {
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); 
+}
+
+
+
+#beneficios {
+    background-color: #cacaca;
+    padding: 40px;
+    text-align: center;
+    font-family: system-ui, -apple-system;
+}
+
+#beneficios h2 {
+    margin-bottom: 30px;
+}
+
+#beneficios ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#beneficios ul li {
+    background-color: rgb(157, 137, 168);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#beneficios ul li:hover {
+    transform: translateY(-10px);
+    background-color: #52aca57a;
+}
+
+#beneficios ul li img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#beneficios ul li p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: system-ui, -apple-system;
+}
+
+
+
+.car {
+    font-family: system-ui, -apple-system;
+    margin-top: 25px;
+    text-align: center;
+}
+#caracteristicas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    max-width: 1500px;
+    position: relative;
+    overflow: hidden;
+    font-family: system-ui, -apple-system;
+    flex-direction: column;
+}
+
+.imagenes {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 15px;
+    justify-content: center;
+}
+
+.foto {
+    position: relative;
+    width: 287px;
+    height: 275px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.texto-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(40, 13, 67, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+}
+
+.foto:hover .texto-slider {
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 992px) {
+    .foto {
+        flex: 0 0 calc(33.33% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .foto {
+        flex: 0 0 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .foto {
+        flex: 0 0 calc(100% - 20px); 
+    }
+}
+
+#testimonios {
+    background-color: #cacaca;
+    padding: 50px;
+}
+
+#testimonios h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 50px;
+}
+
+#carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 400px;
+}
+
+#testimonios .testimonios {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 40%;
+}
+
+.central-slide {
+    transform: scale(1.1) translateY(-10%);
+    filter: none;
+    z-index: 1;
+}
+
+.left-slide {
+    transform: translateX(25%) scale(0.80) translateZ(-50px);
+    filter: grayscale(100%);
+}
+
+.right-slide {
+    transform: translateX(-25%) scale(0.80) translateZ(-50px);
+    filter: grayscale(100%);
+}
+
+#testimonios .testimonio {
+    flex: 0 0 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+#testimonios .testimonio img {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+#testimonios blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    color: black;
+}
+
+#testimonios p {
+    color: black;
+}
+
+
+#prev-testimonio,
+#next-testimonio {
+    background-color: #52aca4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#prev-testimonio {
+    left: 10px;
+}
+
+#next-testimonio {
+    right: 10px;
+}
+
+#prev-testimonio:hover,
+#next-testimonio:hover {
+    background-color: #9e5bd8;
+}
+
+#cta {
+    background-color: #123c3a; 
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px; 
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px; 
+    transition: transform 0.5s ease-in-out;
+}
+
+#cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    font-size: 1.2em; 
+    margin-bottom: 30px;
+}
+#cta:hover {transform: scale(0.95);}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #ab47bc;
+    transform: scale(1.05);
+}
+
+.btn-cta:active {
+    background-color: #8e24aa;
+    transform: scale(0.98);
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    max-width: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.modal {
+    margin-top: 50px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#form-cotizacion input, 
+#form-cotizacion textarea, 
+#form-cotizacion select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#form-cotizacion button {
+    width: 100%;
+    background-color: #52aca4;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form-cotizacion button:hover {
+    background-color: #9e5bd8;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DryMaster</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/imagenes/header_beneficios/logo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/imagenes/header_beneficios/logo.png" alt="logo-header">
+
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#caracteristicas">Caracteristicas</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#cta">Compra Ahora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main">
+        <div class="overlay">
+            <h1>Descubre la Nueva Secadora DryMaster</h1>
+            <p>Seca tu ropa rápidamente y cuida tus prendas con la mejor tecnología.</p>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <h2>Beneficios de la secadora DryMaster</h2>
+        <ul>
+            <li><img src="assets/imagenes/header_beneficios/reloj.png" alt="Beneficio 1"> Seca tu ropa en la mitad del tiempo que las secadoras convencionales.</li>
+            <li><img src="assets/imagenes/header_beneficios/foco.png" alt="Beneficio 2">Ahorra en tu factura de electricidad gracias a su tecnología de bajo consumo.</li>
+            <li><img src="assets/imagenes/header_beneficios/camisa.png" alt="Beneficio 3"> Tecnología que cuida tus prendas, evitando el desgaste y manteniendo su suavidad.</li>
+        </ul>
+    </section>
+
+    <h2 class="car">Características</h2>
+    <section id="caracteristicas">
+        <div class="imagenes">
+            <div class="container">
+                <div class="foto">
+                    <img src="assets/imagenes/caracteristicas_testimonios/panel.png" alt="Caracteristica 1">
+                    <div class="texto-slider">
+                        <h2 id="titulo-caracteristica">Programa de Secado Inteligente</h2>
+                        <p id="descripcion-caracteristica">Programa automático que ajusta el tiempo y la temperatura de secado según el tipo de tela.</p>
+                    </div>
+                </div>
+                <div class="foto  ">
+                    <img src="assets/imagenes/caracteristicas_testimonios/eco.jpg" alt="Caracteristica 2">
+                    <div class="texto-slider">
+                        <h2 id="titulo-caracteristica">Modo Eco</h2>
+                        <p id="descripcion-caracteristica">Reduce el consumo energético al mínimo mientras garantiza un secado eficiente.</p>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="assets/imagenes/caracteristicas_testimonios/app.jpg" alt="Caracteristica 3">
+                    <div class="texto-slider">
+                        <h2 id="titulo-caracteristica">Control a través de App</h2>
+                        <p id="descripcion-caracteristica">Monitorea y controla el ciclo de secado desde tu smartphone con nuestra app exclusiva.</p>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="assets/imagenes/caracteristicas_testimonios/tiempo.jpg" alt="Caracteristica 4">
+                    <div class="texto-slider">
+                        <h2 id="titulo-caracteristica">Ahorro de Tiempo</h2>
+                        <p id="descripcion-caracteristica">Seca tu ropa en tiempo récord gracias a la función de turbo secado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div id="carousel-container">
+            <button id="prev-testimonio">❮</button>
+            <div class="testimonios">
+                <div class="testimonio">
+                    <img src="assets/imagenes/caracteristicas_testimonios/clinete1.jpg" alt="Cliente 1">
+                    <blockquote>"¡Excelente producto! Me encantó."</blockquote>
+                    <p>- Maria Gonzalez</p>
+                </div>
+                <div class="testimonio">
+                    <img src="assets/imagenes/caracteristicas_testimonios/cliente2.jpg" alt="Cliente 2">
+                    <blockquote>"Seca mi ropa rápido y sin esfuerzo."</blockquote>
+                    <p>- Juan Pérez</p>
+                </div>
+                <div class="testimonio">
+                    <img src="assets/imagenes/caracteristicas_testimonios/cliente3.jpg" alt="Cliente 3">
+                    <blockquote>"Deja mi ropa suave y sin desgaste."</blockquote>
+                    <p>- Ana Gómez</p>
+                </div>
+            </div>
+            <button id="next-testimonio">❯</button>
+        </div>
+    </section>
+
+<section id="cta">
+    <h2>¡No esperes más!</h2>
+    <p>Compra la nueva secadora de ropa DryMaster ahora y disfruta de sus beneficios.</p>
+    <a href="#comprar" class="btn-cta">Comprar Ahora</a>
+</section>
+
+<div id="modal-cotizacion" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Solicita tu Cotización</h2>
+        <form id="form-cotizacion">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="number" id="telefono" name="telefono" min="10000000" max="999999999999999" required>
+
+            <label for="producto">Producto/Servicio a Cotizar:</label>
+            <select id="producto" name="producto" required>
+                <option value="secadora-basica">Secadora Básica</option>
+                <option value="secadora-premium">Secadora Premium</option>
+                <option value="instalacion">Servicio de Instalación</option>
+                <option value="mantenimiento">Mantenimiento</option>
+            </select>
+            <button type="submit">Solicitar Cotización</button>
+        </form>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><img src="assets/imagenes/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><img src="assets/imagenes/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><img src="assets/imagenes/instagram.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 DryMaster. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
